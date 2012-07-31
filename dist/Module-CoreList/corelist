@@ -311,7 +311,7 @@ sub max {
 sub display_a {
     my $mod = shift;
 
-    for my $v (grep !/000$/, sort keys %Module::CoreList::version ) {
+    for my $v (grep !/0$/, sort keys %Module::CoreList::version ) {
         next unless exists $Module::CoreList::version{$v}{$mod};
 
         my $mod_v = $Module::CoreList::version{$v}{$mod} || 'undef';
